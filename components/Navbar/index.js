@@ -1,0 +1,26 @@
+import React , { useState } from "react";
+import Header from '../header';
+
+export default function Navbar(props) {
+  const [scroll, setScroll] = React.useState(0);
+
+  const handleScroll = () => setScroll(document.documentElement.scrollTop);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const className = scroll > 80 ? "fixed-navbar animated fadeInDown active" : "fixed-navbar";
+  const [userData, setUserData] = useState(() => {
+    if (typeof window !== 'undefined' && localStorage.getItem('userData')) {
+        return JSON.parse(localStorage.getItem('userData'));
+    }
+    return null;
+});
+  return (
+    <div className={className}>
+        <Header tpClass={props.tpClass} userData={userData}/>
+    </div>
+  ); 
+}

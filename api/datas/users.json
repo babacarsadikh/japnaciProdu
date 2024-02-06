@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "benevole1",
+      "email": "benevole1@example.com",
+      "password": "password1",
+      "type": "benevole",
+      "role": "entreprise",
+      "donations": []
+    },
+    {
+      "id": 2,
+      "username": "benevole2",
+      "email": "benevole2@example.com",
+      "password": "password2",
+      "type": "benevole",
+      "role": "particulier",
+      "donations": []
+    },
+    {
+      "id": 3,
+      "username": "benevole3",
+      "email": "benevole3@example.com",
+      "password": "password3",
+      "type": "benevole",
+      "role": "association",
+      "donations": []
+    },
+    {
+      "id": 4,
+      "username": "beneficiaire1",
+      "email": "beneficiaire1@example.com",
+      "password": "password4",
+      "type": "beneficiaire",
+      "needs": [],
+      "receivedDonations": []
+    },
+    {
+      "id": 5,
+      "username": "admin1",
+      "email": "admin1@example.com",
+      "password": "adminpassword",
+      "type": "admin"
+    }
+  ]
+}
